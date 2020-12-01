@@ -133,6 +133,8 @@ namespace numeric_operators
             Console.WriteLine($"{a} / 2 = {Div2(a)}");
 
             PowersOf2(6);
+            Console.WriteLine("Or another way ...");
+            PowersOf2Other(6);
         }
 
         static int SumUnchecked(int a, int b)
@@ -171,6 +173,15 @@ namespace numeric_operators
             for (int i = 1; i <=n; i++)
             {
                 x = Mul2(x);
+                Console.WriteLine($"2 ^ {i} = {x}");
+            }
+        }
+
+        static void PowersOf2Other(int n)
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                int x = 1 << i;
                 Console.WriteLine($"2 ^ {i} = {x}");
             }
         }
